@@ -1,0 +1,57 @@
+БЫСТРАЯ СПРАВКА: ШАГ 5 (только после успешного теста)
+
+════════════════════════════════════════════════════════════════════
+
+ЧАСТЬ 1: РЕЖИМ AUTO (2 минуты)
+
+1. Отредактируй .env:
+   APP_MODE=shadow  →  APP_MODE=auto
+
+2. Пересобери конфиг:
+   python scripts/build_hosting_config.py
+
+3. Залей на сервер:
+   python scripts/ftp_upload.py deploy/runtime/ai_seller_config.php .. ai_seller_config.php
+
+4. Проверь (из .env скопируй [ТОКЕН]):
+   curl "https://eco-store16.ru/ai-seller/index.php?action=health&token=[ТОКЕН]"
+
+   Должно быть: "mode": "auto" и "ok": true
+
+════════════════════════════════════════════════════════════════════
+
+ЧАСТЬ 2: БОТ НА МАКСЕ (из .env скопируй [WEBHOOK] и [BOT_ID])
+
+curl -X POST "[WEBHOOK]/imopenlines.config.update" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "OPEN_LINE_ID": 12,
+    "WELCOME_BOT_ENABLE": "Y",
+    "WELCOME_BOT_ID": [BOT_ID],
+    "WELCOME_BOT_JOIN": "always",
+    "WELCOME_BOT_LEFT": "queue"
+  }'
+
+Ожидается: "result": true
+
+════════════════════════════════════════════════════════════════════
+
+ПРОВЕРКА В BITRIX
+
+Администратор → Открытые линии → Мессенджеры
+- Приветственный бот: Алина Eco-Store
+- Статус: Включён
+
+════════════════════════════════════════════════════════════════════
+
+ОТКАТ НА SHADOW (если понадобится)
+
+APP_MODE=auto  →  APP_MODE=shadow
+python scripts/build_hosting_config.py
+python scripts/ftp_upload.py deploy/runtime/ai_seller_config.php .. ai_seller_config.php
+
+curl -X POST "[WEBHOOK]/imopenlines.config.update" \
+  -H "Content-Type: application/json" \
+  -d '{"OPEN_LINE_ID": 12, "WELCOME_BOT_ENABLE": "N"}'
+
+════════════════════════════════════════════════════════════════════

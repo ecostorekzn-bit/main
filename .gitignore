@@ -1,0 +1,9 @@
+.env
+.yandex-api-key
+.robot-webhook-url.txt
+yandex-api-key.txt
+data/*.sqlite3
+__pycache__/
+*.pyc
+tmp/
+deploy/runtime/
