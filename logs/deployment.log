@@ -1,0 +1,15 @@
+[2026-07-24 18:13:26] Starting bot deployment on all lines...
+[2026-07-24 18:13:27] ERROR: Line 12 (MAX) - HTTP Error 400: Bad Request
+[2026-07-24 18:13:27] ERROR: Line 4 (VK) - HTTP Error 400: Bad Request
+[2026-07-24 18:13:28] ERROR: Line 10 (Avito) - HTTP Error 400: Bad Request
+[2026-07-24 18:13:28] Deployment complete: 0/3 lines enabled
+[2026-07-24 18:13:43] Starting bot deployment on all lines...
+[2026-07-24 18:13:44] ERROR: Line 12 (MAX) - HTTP 400: {"error":"CONFIG_ID_EMPTY","error_description":"Config ID can\u0027t be empty"}
+[2026-07-24 18:13:44] ERROR: Line 4 (VK) - HTTP 400: {"error":"CONFIG_ID_EMPTY","error_description":"Config ID can\u0027t be empty"}
+[2026-07-24 18:13:45] ERROR: Line 10 (Avito) - HTTP 400: {"error":"CONFIG_ID_EMPTY","error_description":"Config ID can\u0027t be empty"}
+[2026-07-24 18:13:45] Deployment complete: 0/3 lines enabled
+[2026-07-24 18:13:57] Starting bot deployment on all lines...
+[2026-07-24 18:13:57] OK: Line 12 (MAX) enabled - bot assigned as welcome bot
+[2026-07-24 18:13:57] OK: Line 4 (VK) enabled - bot assigned as welcome bot
+[2026-07-24 18:13:58] OK: Line 10 (Avito) enabled - bot assigned as welcome bot
+[2026-07-24 18:13:58] Deployment complete: 3/3 lines enabled

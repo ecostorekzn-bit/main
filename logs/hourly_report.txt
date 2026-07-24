@@ -1,0 +1,31 @@
+
+==================================================
+AI-SELLER STATUS REPORT
+==================================================
+Time: 2026-07-24 18:14:47
+Duration: Last hour (17:14 - 18:14)
+
+SYSTEM STATUS: OK
+  Mode: auto
+  Health checks: 0 passed, 1 failed
+  Server: alive and responding
+  PHP version: 7.4.33
+  Bitrix API: OK
+  Knowledge base: OK
+
+BOT ACTIVITY:
+  Lines active: 3/3 (MAX, VK, Avito)
+  Critical errors: 1
+  Auto-rollbacks triggered: 0
+  Deployment changes: 15
+
+LOGS SUMMARY:
+  1 health check failures detected
+  1 critical errors logged
+
+RECENT ERRORS:
+  [2026-07-24 18:10:48] ERROR: mode=shadow (expected auto)
+
+Next check: 2026-07-24 19:14:47
+==================================================
+
